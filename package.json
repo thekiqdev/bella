@@ -1,0 +1,17 @@
+{
+  "name": "bella",
+  "version": "1.0.0",
+  "description": "Landing page de links da Bella (@abellaviaja)",
+  "private": true,
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsc && node dist/server.js"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
