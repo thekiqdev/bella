@@ -10,6 +10,7 @@ const PUBLIC_DIR = path.resolve(__dirname, "..", "public");
 const ROUTES: Record<string, string> = {
   "/": "index.html",
   "/marcas": "marcas.html",
+  "/liberdade": "liberdade.html",
 };
 
 const MIME: Record<string, string> = {

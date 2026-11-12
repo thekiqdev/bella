@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liberdade financeira pra viajar · Bella</title>
+<meta name="color-scheme" content="light">
+<meta name="description" content="Tudo depende de você, mana!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<svg class="waves" viewBox="0 0 480 230" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 0H480V92C400 70 350 138 270 126C180 112 120 60 0 120Z" fill="#A8482B"/>
+  <path d="M0 0H480V66C410 44 350 108 270 98C180 86 110 36 0 90Z" fill="#C4622D"/>
+  <path d="M0 0H480V44C410 24 350 80 270 72C180 62 110 14 0 62Z" fill="#E08A3C"/>
+  <path d="M0 0H480V22C410 6 350 52 270 46C180 38 110 -2 0 36Z" fill="#E3C48F"/>
+  <path d="M0 120C120 60 180 112 270 126C350 138 400 70 480 92V150C410 132 350 190 270 176C180 160 110 112 0 170Z" fill="#DEE6B9"/>
+  <path d="M0 170C110 112 180 160 270 176C350 190 410 132 480 150V176C410 158 350 214 270 200C180 184 110 138 0 196Z" fill="#7A8240"/>
+</svg>
+<main class="wrap page">
+  <a class="back" href="/">← voltar</a>
+  <p class="handle">@abellaviaja</p>
+  <h1 class="ptitle">Liberdade financeira pra viajar</h1>
+  <p class="lead">Tudo depende de você, mana!</p>
+  <section class="count" role="timer" aria-label="Contagem regressiva para 13 de novembro às 20:30">
+    <div class="clock" id="clock">
+      <div class="cell"><div class="num" id="cd">--</div><div class="lab">dias</div></div>
+      <div class="cell"><div class="num" id="ch">--</div><div class="lab">horas</div></div>
+      <div class="cell"><div class="num" id="cm">--</div><div class="lab">min</div></div>
+      <div class="cell"><div class="num" id="cs">--</div><div class="lab">seg</div></div>
+    </div>
+    <div class="msg2" id="msg2" style="margin-top:14px">13 de novembro, às 20:30</div>
+  </section>
+  <nav class="links">
+    <a class="link main" href="https://chat.whatsapp.com/J7k2gqi6sOFAne67WJsns9?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4&amp;iam=2" target="_blank" rel="noopener">
+      <span class="n">01</span>
+      <span class="t"><b>Participar do grupo VIP</b><span>Entra no WhatsApp</span></span>
+      <span class="a">↗</span>
+    </a>
+  </nav>
+  <footer>© <span id="y"></span> · Bella</footer>
+</main>
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+var target = new Date("2026-11-13T20:30:00-03:00").getTime();
+function pad(n){ return n < 10 ? "0" + n : "" + n; }
+function tick() {
+  var diff = target - Date.now();
+  if (diff <= 0) {
+    document.getElementById("clock").style.display = "none";
+    document.getElementById("msg2").textContent = "O grupo VIP está aberto";
+    clearInterval(timer);
+    return;
+  }
+  var s = Math.floor(diff / 1000);
+  document.getElementById("cd").textContent = pad(Math.floor(s / 86400));
+  document.getElementById("ch").textContent = pad(Math.floor(s % 86400 / 3600));
+  document.getElementById("cm").textContent = pad(Math.floor(s % 3600 / 60));
+  document.getElementById("cs").textContent = pad(s % 60);
+}
+var timer = setInterval(tick, 1000);
+tick();
+</script>
+</body>
+</html>

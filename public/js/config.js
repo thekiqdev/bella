@@ -4,8 +4,8 @@ window.SITE = {
     { title: "Meu Instagram", desc: "Os bastidores do dia a dia", url: "https://www.instagram.com/abellaviaja" },
     { title: "Meu TikTok", desc: "Os vídeos da jornada", url: "https://www.tiktok.com/@abellaviaja?_r=1&_t=ZS-9BKPc9jsaRQ" },
     { title: "Meu WhatsApp", desc: "Contato direto", url: "https://wa.me/554198993457" },
-    { title: "Missão: Sair do Brasil", desc: "Acompanhe a jornada rumo ao mundo inteiro", url: "#" /* comunidade do TikTok */ },
-    { title: "Liberdade financeira pra viajar", desc: "Tudo depende de você, mana!", url: "#" /* página da Kiwify */, main: true },
+    { title: "Comunidade na estrada", desc: "Acompanhe a jornada rumo ao mundo inteiro", url: "https://tiktok.me/group/ZSpueL5b2/" },
+    { title: "Liberdade financeira pra viajar", desc: "Tudo depende de você, mana!", url: "/liberdade", main: true },
     { title: "Conteúdos para marcas e empresas", desc: "Vídeo de apresentação e parcerias", url: "/marcas" }
   ],
   /* data e hora do embarque (horário de Brasília) */
