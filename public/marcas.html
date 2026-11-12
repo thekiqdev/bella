@@ -26,7 +26,7 @@
   <h1 class="ptitle">Conteúdos para marcas e empresas</h1>
   <p class="lead">Conteúdo autêntico para a sua marca. Veja um exemplo e fale comigo.</p>
   <div class="video">
-    <video autoplay muted loop playsinline controls preload="auto" src="/media/apresentacao.mp4">Seu navegador não suporta vídeo.</video>
+    <video id="apresentacao" autoplay playsinline controls preload="auto" src="/media/apresentacao.mp4">Seu navegador não suporta vídeo.</video>
   </div>
   <nav class="links">
     <a class="link main" href="mailto:bellanywhere@gmail.com?subject=Parceria">
@@ -37,6 +37,23 @@
   </nav>
   <footer>© <span id="y"></span> · Bella</footer>
 </main>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+var video = document.getElementById("apresentacao");
+function tocarComAudio() {
+  video.muted = false;
+  video.defaultMuted = false;
+  video.volume = 1;
+  var tentativa = video.play();
+  if (tentativa && tentativa.then) {
+    tentativa.then(function () {
+      window.removeEventListener("pointerdown", tocarComAudio);
+    }).catch(function () {});
+  }
+}
+tocarComAudio();
+video.addEventListener("canplay", tocarComAudio);
+window.addEventListener("pointerdown", tocarComAudio);
+</script>
 </body>
 </html>
